@@ -1,0 +1,41 @@
+.themeDark{
+    --background: black;
+    --fontColor:white;
+    --navColor:grey;
+    --navHoverColor:lightgray;
+    --navActiveColor:black;
+}
+.themeLight{
+    --background: lightblue; 
+    --fontColor:black;
+    --navColor:lightgreen;
+    --navHoverColor:lightyellow;
+    --navActiveColor:green;
+}
+.commonVar{
+    --commonPadding:2rem;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 2.5vh;
+    color: var(--fontColor);
+}
+
+a{
+    text-decoration: none;
+}
+
+.matchParent{
+    height: 100%;
+    width: 100%;
+}
+
+.flex{
+    display: flex;
+}
+
+.commonBorder{
+    border: 1px solid var(--fontColor);
+}

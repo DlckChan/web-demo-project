@@ -1,12 +1,43 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <div :class="`${theme} commonVar`" id="app">
+    <div class="container matchParent flex">
+      <div class="navContainer">
+        <Navigation></Navigation>
+      </div>
+      <div class="body flex">
+        <router-view @swichTheme="switchTheme"></router-view>
+      </div>
     </div>
-    <router-view/>
   </div>
 </template>
+
+<script>
+import Navigation from "./components/Navigation";
+
+export default {
+  components: {
+    Navigation
+  },
+  data() {
+    return {
+      theme: "themeLight"
+    };
+  },
+  methods: {
+    switchTheme(themeName) {
+      //console.log('app',themeName)
+      this.theme = themeName;
+      window.localStorage.setItem("theme", this.theme);
+    }
+  },
+  mounted() {
+    if (window.localStorage.getItem("theme")) {
+      //console.log('aaaa')
+      this.theme = window.localStorage.getItem("theme");
+    }
+  }
+};
+</script>
 
 <style lang="scss">
 #app {
@@ -14,18 +45,22 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-}
+  height: 100vh;
+  width: 100vw;
+  background: var(--background);
+  .container {
+    .navContainer {
+      width: 15%;
+      min-width: 250px;
+    }
+    @media only screen and (max-width: 800px) {
+      .navContainer {
+        display: none;
+      }
+    }
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+    .body {
+      flex: 1;
     }
   }
 }

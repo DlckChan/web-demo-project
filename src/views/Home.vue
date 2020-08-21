@@ -1,18 +1,22 @@
 <template>
-  <div class="home">
+  <div class="Home matchParent flex">
     <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    本项目记录一些技术点和解决方案
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
   name: 'Home',
-  components: {
-    HelloWorld
+  mounted(){
+  
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.Home{
+justify-content: center;
+align-items: center;
+}
+</style>
