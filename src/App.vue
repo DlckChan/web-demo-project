@@ -27,13 +27,13 @@ export default {
     switchTheme(themeName) {
       //console.log('app',themeName)
       this.theme = themeName;
-      window.localStorage.setItem("theme", this.theme);
+      window.sessionStorage.setItem("theme", this.theme);
     }
   },
   mounted() {
-    if (window.localStorage.getItem("theme")) {
+    if (window.sessionStorage.getItem("theme")) {
       //console.log('aaaa')
-      this.theme = window.localStorage.getItem("theme");
+      this.theme = window.sessionStorage.getItem("theme");
     }
   }
 };
@@ -53,7 +53,7 @@ export default {
       width: 15%;
       min-width: 250px;
     }
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 960px) {
       .navContainer {
         display: none;
       }

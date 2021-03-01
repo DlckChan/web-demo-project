@@ -18,12 +18,16 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
-    path:'/themeswitch',
+    path:'/theme-switch',
     component:() => import ('../views/ThemeChange.vue')
   },
   {
-    path:'/screenadaptation',
+    path:'/screen-adaptation',
     component:()=> import('../views/ScreenAdaptation.vue')
+  },
+  {
+    path:'/embed-object',
+    component:()=> import('../views/EmbedObject.vue')
   }
 ]
 

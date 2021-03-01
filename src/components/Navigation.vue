@@ -14,10 +14,10 @@ export default {
   data() {
     return {
       menuData: [
-        { name: "主页", link: "Home" },
-        { name: "主题切换", link: "ThemeSwitch" },
-        { name: "大屏适配方案1", link: "ScreenAdaptation" },
-        {name:'大屏适配方案2',link:""}
+        { name: "主页", link: "home" },
+        { name: "主题切换", link: "theme-switch" },
+        { name: "大屏适配方案", link: "screen-adaptation" },
+        {name:'预览PDF',link:"embed-object"}
       ],
       menuActiveIndex: 0,
       MENUINDEX: this.$constant.menuActiveIndex
@@ -35,10 +35,10 @@ export default {
     },
     //初始化菜单
     initMenuActive() {
-      if (!window.localStorage.getItem(this.MENUINDEX)) {
-        window.localStorage.setItem(this.MENUINDEX, 0);
+      if (!window.sessionStorage.getItem(this.MENUINDEX)) {
+        window.sessionStorage.setItem(this.MENUINDEX, 0);
       }
-      this.menuActiveIndex = window.localStorage.getItem(this.MENUINDEX);
+      this.menuActiveIndex = window.sessionStorage.getItem(this.MENUINDEX);
       this.$router
         .replace(this.menuData[this.menuActiveIndex].link)
         .catch(() => {
@@ -49,7 +49,7 @@ export default {
   watch: {
     //监听菜单index变化
     menuActiveIndex() {
-      window.localStorage.setItem(this.MENUINDEX, this.menuActiveIndex);
+      window.sessionStorage.setItem(this.MENUINDEX, this.menuActiveIndex);
     }
   }
 };
