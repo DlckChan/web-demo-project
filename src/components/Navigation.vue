@@ -63,12 +63,13 @@ export default {
   .menuItem {
     padding: 0.5rem;
     &:hover {
-      background: lightgray;
+      background: var(--navActiveBackgroundColor);
       cursor: pointer;
     }
   }
   .isActive {
     color: var(--navActiveColor);
+    background: var(--navActiveBackgroundColor);;
   }
 }
 </style>

@@ -4,13 +4,15 @@
     --navColor:grey;
     --navHoverColor:lightgray;
     --navActiveColor:black;
+    --navActiveBackgroundColor:lightgray;
 }
 .themeLight{
-    --background: lightblue; 
+    --background: #eaffd0; 
     --fontColor:black;
-    --navColor:lightgreen;
-    --navHoverColor:lightyellow;
+    --navColor:#95e1d3;
+    --navHoverColor:#eaffd0;
     --navActiveColor:green;
+    --navActiveBackgroundColor:#eaffd0;
 }
 .commonVar{
     --commonPadding:2rem;
