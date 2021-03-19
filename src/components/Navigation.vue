@@ -17,7 +17,8 @@ export default {
         { name: "主页", link: "home" },
         { name: "主题切换", link: "theme-switch" },
         { name: "大屏适配方案", link: "screen-adaptation" },
-        {name:'预览PDF',link:"embed-object"}
+        {name:'预览PDF',link:"embed-object"},
+        {name:'el组件适配',link:'el-adaptation'}
       ],
       menuActiveIndex: 0,
       MENUINDEX: this.$constant.menuActiveIndex

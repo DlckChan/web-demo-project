@@ -4,7 +4,6 @@ import router from './router'
 import './assets/theme.css'
 import constant from  './utils/constant'
 
-
 Vue.config.productionTip = false
 Vue.prototype.$constant=constant
 

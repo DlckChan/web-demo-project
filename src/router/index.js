@@ -28,6 +28,10 @@ const routes = [
   {
     path:'/embed-object',
     component:()=> import('../views/EmbedObject.vue')
+  },
+  {
+    path:'/el-adaptation',
+    component:()=>import('../views/ElAdaptation.vue')
   }
 ]
 
