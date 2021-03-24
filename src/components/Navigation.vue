@@ -21,7 +21,6 @@ export default {
         {name:'el组件适配',link:'el-adaptation'}
       ],
       menuActiveIndex: 0,
-      MENUINDEX: this.$constant.menuActiveIndex
     };
   },
   created() {
@@ -36,10 +35,10 @@ export default {
     },
     //初始化菜单
     initMenuActive() {
-      if (!window.sessionStorage.getItem(this.MENUINDEX)) {
-        window.sessionStorage.setItem(this.MENUINDEX, 0);
+      if (!window.sessionStorage.getItem(this.$constant.MENU_ACTIVE_INDEX)) {
+        window.sessionStorage.setItem(this.$constant.MENU_ACTIVE_INDEX, 0);
       }
-      this.menuActiveIndex = window.sessionStorage.getItem(this.MENUINDEX);
+      this.menuActiveIndex = window.sessionStorage.getItem(this.$constant.MENU_ACTIVE_INDEX);
       this.$router
         .replace(this.menuData[this.menuActiveIndex].link)
         .catch(() => {
@@ -50,7 +49,7 @@ export default {
   watch: {
     //监听菜单index变化
     menuActiveIndex() {
-      window.sessionStorage.setItem(this.MENUINDEX, this.menuActiveIndex);
+      window.sessionStorage.setItem(this.$constant.MENU_ACTIVE_INDEX, this.menuActiveIndex);
     }
   }
 };
