@@ -18,7 +18,8 @@ export default {
         { name: "主题切换", link: "theme-switch" },
         { name: "大屏适配方案", link: "screen-adaptation" },
         {name:'预览PDF',link:"embed-object"},
-        {name:'el组件适配',link:'el-adaptation'}
+        {name:'el组件适配',link:'el-adaptation'},
+        {name:'Vue参数传递',link:'vue-props'}
       ],
       menuActiveIndex: 0,
     };
