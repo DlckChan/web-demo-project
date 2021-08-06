@@ -36,6 +36,10 @@ const routes = [
   {
     path:'/vue-props',
     component:()=>import('../views/VueProps.vue')
+  },
+  {
+    path:'/vw-adaptation',
+    component:()=>import('../views/VwAdaptation.vue')
   }
 ]
 

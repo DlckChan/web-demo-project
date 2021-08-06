@@ -94,12 +94,13 @@ export default {
     height: 100%;
    
   .container {
-    height: 600px;
-    width: 600px;
+    width: 600px;   
+    height: 70%;
     flex-direction: column;
     display: flex;
 
     .el-table {
+      flex: 1;
        flex-direction: column;
     }
   }

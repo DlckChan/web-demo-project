@@ -47,6 +47,7 @@ export default {
   text-align: center;
   height: 100vh;
   width: 100vw;
+  min-width: 1920px;
   background: var(--background);
   .container {
     .navContainer {

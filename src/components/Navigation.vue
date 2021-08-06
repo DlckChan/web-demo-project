@@ -19,7 +19,9 @@ export default {
         { name: "大屏适配方案", link: "screen-adaptation" },
         {name:'预览PDF',link:"embed-object"},
         {name:'el组件适配',link:'el-adaptation'},
-        {name:'Vue参数传递',link:'vue-props'}
+        {name:'Vue参数传递',link:'vue-props'},
+        {name:'vw适配样例',link:'vw-adaptation'},
+        {name:'about',link:'about'}
       ],
       menuActiveIndex: 0,
     };
