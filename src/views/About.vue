@@ -11,8 +11,6 @@ export default {
   computed: {},
   created() {},
   mounted() {
-    this.getResult();
-    console.log(this.a);
   },
   watch: {},
   methods: {},
